@@ -1,0 +1,87 @@
+ffans-ip-location:
+  admin:
+    settings:
+      enabled_label: Show IP location labels
+      enabled_help: Resolve new comment posts and expose only the configured public location granularity.
+      position_label: Display position
+      position_options:
+        footer: Post footer
+        header: Post header
+      display_on_profile_label: Show IP location on user profiles
+      display_on_profile_help: Display the publication location of the latest comment post visible to the current visitor.
+      show_unknown_label: Show unknown locations
+      show_unknown_help: Display an unknown label for private, invalid, unavailable, or unresolved addresses.
+    database:
+      title: Location databases
+      help: Install the bundled IPv4 and IPv6 databases into the Flarum storage directory.
+      ready: The location databases are initialized and IP addresses can be resolved.
+      not_ready: The location databases are not fully initialized. IP addresses cannot be resolved.
+      family_status: "IPv4: {ipv4} · IPv6: {ipv6}"
+      available: Available
+      missing: Not initialized
+      initialize_button: Initialize databases
+      reinitialize_button: Reinitialize databases
+      initializing: Initializing…
+      success: The location databases were initialized successfully.
+      error: Database initialization failed. Check the storage directory permissions and the Flarum log.
+    recalculate:
+      title: Recalculate IP locations
+      help: Backfill or recalculate comment-post locations in the background using the current databases. You may safely close or refresh this page after the task starts.
+      force_label: Full recalculation
+      force_help: When enabled, overwrite every existing result. When disabled, process only posts with no result or a failed or unknown result.
+      button: Create background task
+      confirm_normal: Backfill comment posts that do not have a valid IP location result?
+      confirm_force: Overwrite the existing IP location result for every comment post?
+      unknown_time: Unknown time
+      summary:
+        pending: "Waiting for worker · {total} posts"
+        running: "Running in background: {processed} / {total}"
+        completed: "Completed at {time} · {processed} posts processed"
+        failed: "Failed at {time} · {processed} / {total} posts processed"
+      success: "Finished processing {count} posts."
+      error: The background task failed. Check the queue, scheduler, and database status, then try again.
+      database_required: Initialize both the IPv4 and IPv6 location databases above before creating a recalculation task.
+      queue_required: "The current queue driver is {driver}. Enable the database queue in config.php and follow the <a>scheduler documentation</a> to run the scheduler every minute."
+  forum:
+    label: "IP location: {location}"
+    loading: "IP location: Loading…"
+    published_in: "Published in {location}"
+    unknown: Unknown
+    tooltip: This location is inferred from the network IP and may be affected by carrier routing, proxies, or VPNs.
+  lib:
+    regions:
+      HK: Hong Kong, China
+      MO: Macao, China
+      TW: Taiwan, China
+    subdivisions:
+      BJ: Beijing
+      TJ: Tianjin
+      HE: Hebei
+      SX: Shanxi
+      NM: Inner Mongolia
+      LN: Liaoning
+      JL: Jilin
+      HL: Heilongjiang
+      SH: Shanghai
+      JS: Jiangsu
+      ZJ: Zhejiang
+      AH: Anhui
+      FJ: Fujian
+      JX: Jiangxi
+      SD: Shandong
+      HA: Henan
+      HB: Hubei
+      HN: Hunan
+      GD: Guangdong
+      GX: Guangxi
+      HI: Hainan
+      CQ: Chongqing
+      SC: Sichuan
+      GZ: Guizhou
+      YN: Yunnan
+      XZ: Tibet
+      SN: Shaanxi
+      GS: Gansu
+      QH: Qinghai
+      NX: Ningxia
+      XJ: Xinjiang

@@ -1,0 +1,87 @@
+ffans-ip-location:
+  admin:
+    settings:
+      enabled_label: 显示帖子 IP 属地
+      enabled_help: 公开合规粒度的属地信息，旧帖子属地信息需要在下方重新解析。
+      position_label: 展示位置
+      position_options:
+        footer: 帖子底部
+        header: 帖子头部
+      display_on_profile_label: 显示用户主页 IP 属地
+      display_on_profile_help: 在用户主页显示其最近一次发帖的属地信息。不同访客因权限不同，看到的属地信息可能不一致。
+      show_unknown_label: 显示未知属地
+      show_unknown_help: 对内网、无效、数据库不可用或无法解析的地址显示“未知”。
+    database:
+      title: 定位数据库
+      help: 安装 IPv4 和 IPv6 定位库到 Flarum storage 目录。
+      ready: 定位库已初始化，可以正常解析 IP 地址。
+      not_ready: 尚未初始化。初始化前无法解析 IP 地址。
+      family_status: "IPv4：{ipv4} · IPv6：{ipv6}"
+      available: 可用
+      missing: 未初始化
+      initialize_button: 初始化定位库
+      reinitialize_button: 重新初始化定位库
+      initializing: 正在初始化…
+      success: 定位库初始化完成。
+      error: 定位库初始化失败。请检查 storage 目录写入权限和 Flarum 日志。
+    recalculate:
+      title: 重新计算 IP 属地
+      help: 在后台补算或重新计算帖子 IP 属地信息。关闭或刷新当前页面不影响任务执行。
+      force_label: 全量计算
+      force_help: 开启此项，重新计算并覆盖所有属地结果。关闭时仅处理未知属地的帖子。
+      button: 开始计算任务
+      confirm_normal: 确定要补算未知属地的帖子吗？
+      confirm_force: 确定要重新计算 IP 属地吗？此操作会覆盖已有属地结果。
+      unknown_time: 未知时间
+      summary:
+        pending: "等待后台处理 · 共 {total} 条"
+        running: "后台处理中：{processed} / {total}"
+        completed: "完成于 {time} · 共处理 {processed} 条"
+        failed: "失败于 {time} · 已处理 {processed} / {total}"
+      success: "已完成，共处理 {count} 条帖子。"
+      error: 后台重算任务失败。请检查队列、调度器和数据库状态后重试。
+      database_required: 请先在上方初始化 IPv4 和 IPv6 定位库，然后再创建计算任务。
+      queue_required: "当前队列驱动为 {driver}。请在 config.php 中启用 database 队列，并按照<a>计划任务文档</a>配置每分钟运行 scheduler。"
+  forum:
+    label: "IP 属地：{location}"
+    loading: "IP 属地：加载中…"
+    published_in: "发布于 {location}"
+    unknown: 未知
+    tooltip: 属地由网络 IP 推测，可能受运营商调度、代理或 VPN 影响。
+  lib:
+    regions:
+      HK: 中国香港
+      MO: 中国澳门
+      TW: 中国台湾
+    subdivisions:
+      BJ: 北京
+      TJ: 天津
+      HE: 河北
+      SX: 山西
+      NM: 内蒙古
+      LN: 辽宁
+      JL: 吉林
+      HL: 黑龙江
+      SH: 上海
+      JS: 江苏
+      ZJ: 浙江
+      AH: 安徽
+      FJ: 福建
+      JX: 江西
+      SD: 山东
+      HA: 河南
+      HB: 湖北
+      HN: 湖南
+      GD: 广东
+      GX: 广西
+      HI: 海南
+      CQ: 重庆
+      SC: 四川
+      GZ: 贵州
+      YN: 云南
+      XZ: 西藏
+      SN: 陕西
+      GS: 甘肃
+      QH: 青海
+      NX: 宁夏
+      XJ: 新疆

@@ -1,0 +1,43 @@
+.Post-ipLocation {
+  align-items: center;
+  color: var(--muted-color);
+  display: inline-flex;
+  white-space: nowrap;
+}
+
+.Post-footer .Post-ipLocation {
+  font-size: 12px;
+}
+
+.PostMeta .Post-ipLocation::before {
+  //content: '•';
+  content: '·';
+  margin: 0 6px;
+}
+
+.UserCard-ipLocation {
+  align-items: center;
+  display: inline-flex;
+}
+
+.UserCard-ipLocationSpinner {
+  --size: 14px;
+  --thickness: 2px;
+  color: currentColor;
+  margin-right: 6px;
+}
+
+.UserCard-info > .item-ipLocation {
+  display: block;
+  margin-right: 0;
+  margin-top: 7px;
+}
+
+.UserCard-ipLocationIcon {
+  fill: currentColor;
+  flex: 0 0 auto;
+  font-size: 14px;
+  height: 1em;
+  margin-right: 4px;
+  width: 1.25em;
+}
