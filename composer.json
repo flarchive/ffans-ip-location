@@ -1,0 +1,83 @@
+{
+    "name": "ffans/ip-location",
+    "description": "Compliant IP geolocation display for internet platforms serving Mainland China.",
+    "type": "flarum-extension",
+    "license": "(MIT AND Apache-2.0)",
+    "keywords": [
+        "flarum",
+        "ip",
+        "location",
+        "geolocation",
+        "ip-geolocation",
+        "ip-region",
+        "china"
+    ],
+    "homepage": "https://github.com/FFans/ip-location",
+    "support": {
+        "issues": "https://github.com/FFans/ip-location/issues",
+        "source": "https://github.com/FFans/ip-location"
+    },
+    "funding": [
+        {
+            "type": "website",
+            "url": "https://opencollective.com/ffans/donate"
+        }
+    ],
+    "authors": [
+        {
+            "name": "Golden",
+            "email": "thatsgolden@outlook.com",
+            "homepage": "https://github.com/thatsgolden",
+            "role": "Developer"
+        },
+        {
+            "name": "FFans",
+            "homepage": "https://github.com/FFans"
+        }
+    ],
+    "require": {
+        "ext-zlib": "*",
+        "flarum/core": "^2.0.0"
+    },
+    "require-dev": {
+        "flarum/testing": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "FFans\\IpLocation\\": "src/"
+        },
+        "files": [
+            "lib/ip2region/xdb/Searcher.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "FFans\\IpLocation\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": [
+            "@test:unit",
+            "@test:integration"
+        ],
+        "test:unit": "@php vendor/bin/phpunit -c tests/phpunit.unit.xml",
+        "test:integration": "@php vendor/bin/phpunit -c tests/phpunit.integration.xml",
+        "test:setup": "@php tests/integration/setup.php"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "FFans IP Location",
+            "category": "feature",
+            "links": {
+                "forumZh": "https://discuss.flarum.org.cn/d/16551"
+            },
+            "icon": {
+                "name": "fas fa-location-dot",
+                "backgroundColor": "#d73a49",
+                "color": "#ffffff"
+            }
+        }
+    },
+    "minimum-stability": "beta",
+    "prefer-stable": true
+}
