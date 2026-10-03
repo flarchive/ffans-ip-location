@@ -2,13 +2,16 @@
 
 > **Read-only archive of released versions of ffans/ip-location.** Not for installation: use [Packagist](https://packagist.org/packages/ffans/ip-location) or the [upstream repository](https://github.com/FFans/ip-location).
 
-**0** versions archived · Latest: [`v2.0.0-beta.4`](https://github.com/flarchive/ffans-ip-location/tree/archive/v2.0.0-beta.4) · License: `(MIT AND Apache-2.0)` · Flarum: `^2.0.0`
+**4** versions archived · Latest: [`v2.0.0-beta.4`](https://github.com/flarchive/ffans-ip-location/tree/archive/v2.0.0-beta.4) · License: `(MIT AND Apache-2.0)` · Flarum: `^2.0.0`
 
 ## Archived Versions
 
 | Version | Released | Flarum | Source |
 |---|---|---|---|
-| — | — | — | — |
+| `v2.0.0-beta.1` | 2026-08-27 | `^2.0.0` | [Browse](https://github.com/flarchive/ffans-ip-location/tree/archive/v2.0.0-beta.1) |
+| `v2.0.0-beta.2` | 2026-08-27 | `^2.0.0` | [Browse](https://github.com/flarchive/ffans-ip-location/tree/archive/v2.0.0-beta.2) |
+| `v2.0.0-beta.3` | 2026-09-09 | `^2.0.0` | [Browse](https://github.com/flarchive/ffans-ip-location/tree/archive/v2.0.0-beta.3) |
+| `v2.0.0-beta.4` | 2026-09-09 | `^2.0.0` | [Browse](https://github.com/flarchive/ffans-ip-location/tree/archive/v2.0.0-beta.4) |
 
 Catalog entry: [packages/ffans-ip-location.json](https://github.com/flarchive/archive-index/blob/main/packages/ffans-ip-location.json)
 
